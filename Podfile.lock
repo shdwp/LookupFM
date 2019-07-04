@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - DiscogsSwift (0.0.1):
+    - Alamofire
+    - AlamofireObjectMapper
+  - LastFmSwift (0.0.1):
+    - Alamofire
+    - AlamofireObjectMapper
+  - ObjectMapper (3.5.1)
+  - Realm (3.17.0):
+    - Realm/Headers (= 3.17.0)
+  - Realm/Headers (3.17.0)
+  - RealmSwift (3.17.0):
+    - Realm (= 3.17.0)
+
+DEPENDENCIES:
+  - AlamofireImage
+  - DiscogsSwift (from `submodules/DiscogsSwift`)
+  - LastFmSwift (from `submodules/LastFmSwift`)
+  - RealmSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - AlamofireObjectMapper
+    - ObjectMapper
+    - Realm
+    - RealmSwift
+
+EXTERNAL SOURCES:
+  DiscogsSwift:
+    :path: submodules/DiscogsSwift
+  LastFmSwift:
+    :path: submodules/LastFmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  DiscogsSwift: becf6bc04fe7a8dd5749c28c5c6a90c25a86cbb7
+  LastFmSwift: 04b71b7912007cd07fa340898e8ec7c4715d4ad9
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  Realm: b30db41ff34fc858ffc25ba8d44a82c164e7ccd0
+  RealmSwift: fe733e459d60dc7b6971d4cbee2eb4854097d12c
+
+PODFILE CHECKSUM: 753516342ec6a9aa1ab83eb1a196fbac26204c2d
+
+COCOAPODS: 1.6.1

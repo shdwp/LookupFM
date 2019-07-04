@@ -1,0 +1,44 @@
+@startuml
+' actors
+:Last FM Api: as lastfm
+:User: as user
+:Database: as db
+
+' general cases
+(Query LastFM Api) as (query_lastfm)
+(Query MusicKit) as (query_mk)
+
+' use cases
+(Search for artists on LastFM) as (search)
+(Browse local Music database\nand query Last FM\nfor more information) as (browse_local)
+(See currently played song\nand query Last FM\nfor more information) as (lookup_current)
+(Wishlist LastFM item\nto checkout later) as (wishlist)
+(View wishlisted\nitems) as (view_wishlisted)
+(Store item in the DB) as (save_db)
+(Query DB) as (fetch_db)
+
+' mk
+(browse_local) .-down-> (query_mk) : use
+(lookup_current) .-down-> (query_mk) : use
+
+' last fm
+(query_mk) .-down-> (query_lastfm) : use
+(search) .-down-> (query_lastfm) : use
+
+' db
+(wishlist) .-down-> (save_db) : use
+(view_wishlisted) .-down-> (fetch_db) : use
+
+' actor connections
+(query_lastfm) -left-> lastfm
+(query_mk) -right-> MusicKit
+(save_db) -right-> db
+(fetch_db) -left-> db
+
+user -down-> (search)
+user -down-> (browse_local)
+user -down-> (lookup_current)
+user -down-> (wishlist)
+user -down-> (view_wishlisted)
+
+@enduml
